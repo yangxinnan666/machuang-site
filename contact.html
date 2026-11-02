@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>联系 · 码创工坊 小程序定制开发</title>
+<meta name="description" content="说说你的小程序想法，24 小时内回复可行方案、工期和报价。微信 DYBSSG666，邮箱 2597252592@qq.com。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="码创工坊 首页"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="7" fill="#08482D"/><path d="M8.6 9.4 5.2 13l3.4 3.6M17.4 9.4l3.4 3.6-3.4 3.6M14.8 7.8 11.2 18.2" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>码创工坊</span></a>
+
+    <nav class="nav" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="cases.html">案例</a>
+      <a href="services.html">服务</a>
+      <a href="process.html">流程</a>
+      <a href="pricing.html">价格</a>
+      <a href="contact.html" class="is-active" aria-current="page">联系</a>
+    </nav>
+
+    <div class="header-right">
+      <a class="btn btn--dark" href="contact.html">免费咨询</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="打开菜单" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">首页</a>
+    <a href="cases.html">案例</a>
+    <a href="services.html">服务</a>
+    <a href="process.html">流程</a>
+    <a href="pricing.html">价格</a>
+    <a href="contact.html" class="is-active">联系</a>
+  </div>
+</header>
+
+<main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+<div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-info" data-reveal>
+          <span class="eyebrow">联系</span>
+          <h2>说说你的想法<br>我先给个方案</h2>
+          <p class="sec-sub">把场景和预算说清楚，24 小时内回复你一份可行的做法、工期和报价。不合适也没关系，方案可以带走。</p>
+
+          <div class="contact-list">
+            <div class="contact-item"><span class="k">微信</span><span class="v" id="wechatText">DYBSSG666</span></div>
+            <div class="contact-item"><span class="k">邮箱</span><span class="v"><a id="mailLink" href="#">2597252592@qq.com</a></span></div>
+            <div class="contact-item"><span class="k">时间</span><span class="v">周一至周六 9:00 – 21:00</span></div>
+          </div>
+
+          <div class="qr-block">
+            <div class="qr" id="wechatQRBox">
+              <img id="wechatQR" src="img/wechat-qr.png" alt="微信二维码" width="96" height="96" onerror="this.parentNode.classList.add('is-empty')">
+            </div>
+            <div class="qr-text">
+              <b>微信扫码加我</b>
+              <span>微信号 DYBSSG666</span>
+              <span>备注一下「小程序」，通过更快</span>
+            </div>
+          </div>
+
+          <div class="guards guards--3">
+            <div class="guard"><b>24 小时内回方案</b><span>工作日当天回，晚上提交的第二天上午必回。</span></div>
+            <div class="guard"><b>不合适直接说</b><span>需求太早或预算不匹配，我会直说不建议做，不绕圈子。</span></div>
+            <div class="guard"><b>方案可以带走</b><span>沟通里的思路、报价、原型，你拿去问别家也没问题。</span></div>
+          </div>
+
+          <div class="contact-tip">提交表单后需求会直接发到我的邮箱。我会先确认实现方式，再决定要不要做——需求太模糊的话，我也会直接告诉你不建议做。</div>
+        </div>
+
+        <div class="form-card" id="formCard" data-reveal style="--d:.08s">
+          <form id="contactForm" action="https://formsubmit.co/2597252592@qq.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="【小程序咨询】来自网站表单">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="form-row">
+              <div class="field">
+                <label for="f-name">怎么称呼 <b>*</b></label>
+                <input id="f-name" name="name" type="text" placeholder="王先生 / 小李" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-contact">微信或手机 <b>*</b></label>
+                <input id="f-contact" name="contact" type="text" placeholder="方便联系的方式" autocomplete="tel" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="f-type">项目类型</label>
+                <select id="f-type" name="type">
+                  <option>点单 / 外卖</option>
+                  <option>预约 / 到店核销</option>
+                  <option>商城 / 分销</option>
+                  <option>会员 / 储值</option>
+                  <option>展示 / 官网型</option>
+                  <option>其他，先聊聊</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-budget">预算范围</label>
+                <select id="f-budget" name="budget">
+                  <option>1 万以内</option>
+                  <option>1 – 2 万</option>
+                  <option>2 – 5 万</option>
+                  <option>5 万以上</option>
+                  <option>还没定</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-msg">需求描述 <b>*</b></label>
+              <textarea id="f-msg" name="message" placeholder="做哪一行、想解决什么问题、有没有参考的小程序、希望什么时候上线……"></textarea>
+            </div>
+
+            <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <p class="form-msg" id="formMsg" role="alert"></p>
+
+            <div class="form-foot">
+              <button class="btn btn--dark" type="submit" id="submitBtn">发送需求</button>
+              <span class="alt">或直接邮件：<a id="mailLink2" href="#">2597252592@qq.com</a></span>
+            </div>
+          </form>
+
+          <div class="form-done" id="formDone">
+            <div class="ok">
+              <svg width="26" height="26" viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>
+            </div>
+            <h3>已经发出去了</h3>
+            <p>我通常 24 小时内回复。<br>急的话可以直接加微信 <b id="wechatText2">DYBSSG666</b>。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">合作范围</span>
+          <h2>什么能做、什么不建议做</h2>
+        </div>
+        <p class="sec-sub">把边界说在前面，省掉一轮互相试探。</p>
+      </div>
+      <div class="guards guards--3">
+        <div class="guard"><b>能接</b><span>点单、预约、商城、会员、分销、多门店、管理后台、H5 与小程序互相跳转，以及接手别人做了一半的项目。</span></div>
+        <div class="guard"><b>要先评估</b><span>对接 ERP / POS / 硬件设备、需要 ICP 或特殊资质、日活预期十万以上——这些能做，但要先看清楚接口和合规。</span></div>
+        <div class="guard"><b>不建议做</b><span>纯套壳的“分销返利”盘、需要绕过平台规则的功能、预算低于 500 还想做完整商城。这类我会直说。</span></div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">沟通前先看</span>
+          <h2>这几个问题回答完，能省一轮来回</h2>
+        </div>
+        <p class="sec-sub">如果下面正好有你的疑问，直接看答案；没有的话表单里写，我一条条回。</p>
+      </div>
+      <div class="faq">
+        <details data-reveal open>
+          <summary>我需要准备什么材料？</summary>
+          <p>营业执照（要开微信支付就必须有）、小程序账号（没有我帮你注册，用你的手机号）、商品或服务的图片和价格、门店地址与营业时间。UI 需要的图可以先占位，上线前替换。</p>
+        </details>
+        <details data-reveal>
+          <summary>能先看方案再决定吗？</summary>
+          <p>可以。需求说清楚之后我先给功能清单、工期和固定报价，方案你可以带走拿去比价，不用先付任何费用。</p>
+        </details>
+        <details data-reveal>
+          <summary>你一个人做，工期会不会拖？</summary>
+          <p>排期表在流程页写明了每个阶段几天。真遇到拖期我会提前说，并且按合同补偿。目前 128 个项目里，超期的有 4 个，都是因为客户素材或审核卡住。</p>
+        </details>
+        <details data-reveal>
+          <summary>上线之后能改内容吗？</summary>
+          <p>能。后台给你账号，商品、价格、活动、文案自己就能改，我交付时会花半小时教一遍。改页面结构这种才需要找我。</p>
+        </details>
+        <details data-reveal>
+          <summary>可以只做设计或只做开发吗？</summary>
+          <p>可以。只做 UI 设计、只做开发实现（你出设计稿）、只做后台系统都接。接手别人的项目也可以，但我会先看一遍代码再报价。</p>
+        </details>
+      </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="logo" href="index.html"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="7" fill="#08482D"/><path d="M8.6 9.4 5.2 13l3.4 3.6M17.4 9.4l3.4 3.6-3.4 3.6M14.8 7.8 11.2 18.2" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>码创工坊</span></a>
+      <div class="footer-links">
+        <a href="cases.html">案例</a>
+        <a href="services.html">服务</a>
+        <a href="process.html">流程</a>
+        <a href="pricing.html">价格</a>
+        <a href="contact.html">联系</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© <span id="year">2026</span> 码创工坊 · 微信小程序定制开发</span>
+      <span>微信联系 · DYBSSG666</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

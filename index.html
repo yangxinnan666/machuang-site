@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>码创工坊 · 微信小程序定制开发</title>
+<meta name="description" content="微信小程序定制开发：点单、预约、商城、会员。需求、设计、开发一个人跟到底，最快 7 天上线，交付源码与后台。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="码创工坊 首页"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="7" fill="#08482D"/><path d="M8.6 9.4 5.2 13l3.4 3.6M17.4 9.4l3.4 3.6-3.4 3.6M14.8 7.8 11.2 18.2" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>码创工坊</span></a>
+
+    <nav class="nav" aria-label="主导航">
+      <a href="index.html" class="is-active" aria-current="page">首页</a>
+      <a href="cases.html">案例</a>
+      <a href="services.html">服务</a>
+      <a href="process.html">流程</a>
+      <a href="pricing.html">价格</a>
+      <a href="contact.html">联系</a>
+    </nav>
+
+    <div class="header-right">
+      <a class="btn btn--dark" href="contact.html">免费咨询</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="打开菜单" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="is-active">首页</a>
+    <a href="cases.html">案例</a>
+    <a href="services.html">服务</a>
+    <a href="process.html">流程</a>
+    <a href="pricing.html">价格</a>
+    <a href="contact.html">联系</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="top"><div class="stage" id="stage">
+
+      <div class="badge">已交付 120+ 小程序 · 平均 14 天上线</div>
+
+      <h1 class="headline">
+        <span class="line"><span class="lw">把想法做成小程序</span></span>
+        <span class="line"><span class="lw">从设计到上线交付</span></span>
+      </h1>
+
+      <p class="subline">
+        <span class="sl">专注微信小程序定制开发，点单、预约、商城、会员都能做。</span>
+        <span class="sl">需求、设计、开发一个人跟到底，不用来回转述，</span>
+        <span class="sl">最快 7 天上线，交付源码与后台。</span>
+      </p>
+
+      <svg class="doodle" id="slash" viewBox="0 0 64 74" aria-hidden="true">
+        <path d="M8 64 L28 8"></path>
+        <path d="M34 68 L54 12"></path>
+      </svg>
+
+      <div class="note note--seen">让客户<br>找到你</div>
+
+      <svg class="doodle" id="arrowSeen" viewBox="0 0 220 230" aria-hidden="true">
+        <path d="M96 6 C150 42 168 110 130 166 C116 186 100 200 80 208"></path>
+        <path d="M105 214 L80 208 L95 187"></path>
+      </svg>
+
+      <div class="row" id="row" role="region" aria-label="小程序案例预览轮播"></div>
+
+      <div class="cta-wrap">
+        <div class="cta-ring">
+          <a class="cta" href="contact.html">聊聊需求</a>
+        </div>
+        <span class="note note--zero">免费评估</span>
+        <svg class="doodle" id="arrowZero" viewBox="0 0 62 64" aria-hidden="true">
+          <path d="M6 54 C26 51 41 39 47 18"></path>
+          <path d="M57 37 L47 18 L27 30"></path>
+        </svg>
+      </div>
+
+    </div></section>
+
+<section class="stats">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat" data-reveal><b>120+</b><span>已交付项目</span></div>
+        <div class="stat" data-reveal style="--d:.06s"><b>14 天</b><span>平均上线周期</span></div>
+        <div class="stat" data-reveal style="--d:.12s"><b>92%</b><span>客户转介绍</span></div>
+        <div class="stat" data-reveal style="--d:.18s"><b>7×12h</b><span>响应时间</span></div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="score">
+  <div class="wrap">
+    <p class="score-lead">下面的数字来自实际项目后台，不是行业平均值</p>
+    <div class="score-grid">
+      <div class="score-cell"><b>128<i>个</i></b><span>已上线的小程序，六类线下生意</span></div>
+      <div class="score-cell"><b>41<i>个</i></b><span>做过的细分行业，功能能直接复用</span></div>
+      <div class="score-cell"><b>14<i>天</i></b><span>模板改版平均上线周期</span></div>
+      <div class="score-cell"><b>92<i>%</i></b><span>新单来自老客户转介绍</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">行业方案</span>
+          <h2>六个行业，做过类似的事</h2>
+        </div>
+        <p class="sec-sub">功能骨架相通，行业细节不同。下面是我最常接的六类，每类都有可直接复用的模块，不用从零试错。</p>
+      </div>
+
+      <div class="industries">
+        <div class="industry" data-reveal>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M6 8h12l-1.4 10.4a2 2 0 0 1-2 1.6H9.4a2 2 0 0 1-2-1.6z"/><path d="M4.5 8h15"/><path d="M9.5 4.5h5"/></svg></div>
+          <h3>餐饮 · 茶饮</h3>
+          <p>扫码点单、加料自选、堂食与自提分流，高峰期不用靠人喊。</p>
+          <div class="tags"><span>扫码点单</span><span>自提</span><span>叫号</span><span>会员储值</span></div>
+        </div>
+        <div class="industry" data-reveal>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6.2a3 3 0 0 1 6 0V8"/></svg></div>
+          <h3>零售 · 门店</h3>
+          <p>商品库到库存预警连起来，线上下单线下取，导购也能分佣。</p>
+          <div class="tags"><span>商品库</span><span>库存预警</span><span>到店自提</span><span>导购分佣</span></div>
+        </div>
+        <div class="industry" data-reveal>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="7" cy="18" r="2.2"/><circle cx="17" cy="18" r="2.2"/><path d="M8.6 16.3 18 4M15.4 16.3 6 4"/></svg></div>
+          <h3>美业 · 丽人</h3>
+          <p>项目预约、技师排班、次卡核销，客户到店前自动提醒。</p>
+          <div class="tags"><span>预约</span><span>排班</span><span>次卡核销</span><span>到店提醒</span></div>
+        </div>
+        <div class="industry" data-reveal>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 5.5h7a2 2 0 0 1 2 2V20a1.8 1.8 0 0 0-1.8-1.8H4z"/><path d="M20 5.5h-7a2 2 0 0 0-2 2V20a1.8 1.8 0 0 1 1.8-1.8H20z"/></svg></div>
+          <h3>教育 · 培训</h3>
+          <p>课程包、试听转化、签到打卡，排课冲突在系统里就拦掉。</p>
+          <div class="tags"><span>课程包</span><span>试听</span><span>签到</span><span>通知</span></div>
+        </div>
+        <div class="industry" data-reveal>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M9.5 21v-6h5v6"/></svg></div>
+          <h3>生活 · 服务</h3>
+          <p>上门预约、服务范围、师傅派单，评价沉淀成口碑。</p>
+          <div class="tags"><span>上门预约</span><span>派单</span><span>范围计价</span><span>评价</span></div>
+        </div>
+        <div class="industry" data-reveal>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="9.5" cy="19" r="1.5"/><circle cx="17.5" cy="19" r="1.5"/><path d="M2.5 3.5h2.2l2.6 11h11.4"/><path d="M6.5 7h13l-1.6 6.5"/></svg></div>
+          <h3>电商 · 分销</h3>
+          <p>多规格商品、拼团秒杀、二级分销，优惠券能叠加。</p>
+          <div class="tags"><span>商城</span><span>拼团</span><span>分销</span><span>优惠券</span></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">能力矩阵</span>
+          <h2>从进店到复购，一条链全在</h2>
+        </div>
+        <p class="sec-sub">模块化开发，按需组合。用不到的不会硬塞进去——省下来的都是你的预算和工期。</p>
+      </div>
+
+      <div class="matrix">
+      <div class="matrix-group" data-reveal>
+        <div class="mg-head">
+          <span class="eyebrow">获客</span>
+          <h3>把客人弄进来</h3>
+          <p>扫码、分享、分销、社群，几条入口同时开着，不用只靠路过的人。</p>
+        </div>
+        <div class="mg-list">
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#3FBF8A,#1E8F63)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1.2"/><rect x="14" y="4" width="6" height="6" rx="1.2"/><rect x="4" y="14" width="6" height="6" rx="1.2"/><path d="M14 14h3.2v3.2H14zM20 17.2V20h-3.2"/></svg></span></span><div class="mtx"><b>扫码点单</b><span>桌贴、海报、桌牌一个码直达</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#5FA8F2,#3B7BD9)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 14.5l5-5"/><path d="M11.5 7l1.7-1.7a3.4 3.4 0 0 1 4.8 4.8L16.3 11.8"/><path d="M12.5 17l-1.7 1.7a3.4 3.4 0 0 1-4.8-4.8L7.7 12.2"/></svg></span></span><div class="mtx"><b>门店活码</b><span>不同渠道不同码，来源可追溯</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#9C8DF2,#7763DF)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="2.1"/><circle cx="17" cy="5.5" r="2.1"/><circle cx="17" cy="18.5" r="2.1"/><path d="M8 11l7-4.4M8 13l7 4.4"/></svg></span></span><div class="mtx"><b>分享裂变</b><span>老客带新客，奖励自动发</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#F5A94E,#E8862F)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.8" r="2.1"/><circle cx="5" cy="18" r="2.1"/><circle cx="19" cy="18" r="2.1"/><path d="M12 6.9L5.9 16.2M12 6.9l6.1 9.3M7.1 18h9.8"/></svg></span></span><div class="mtx"><b>分销拓客</b><span>二级分销，佣金自动结算</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#F2849E,#DD5E80)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8.8" r="2.7"/><path d="M4.3 18.5c.6-2.8 2.5-4.3 4.7-4.3s4.1 1.5 4.7 4.3"/><circle cx="16.6" cy="8" r="2"/><path d="M15.8 13.8c1.9.3 3.4 1.6 3.9 3.7"/></svg></span></span><div class="mtx"><b>社群团购</b><span>群接龙、限时团，接单到自提</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#45C8C1,#289E98)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5v3a1 1 0 0 0 1 1h2l7 4V5.5l-7 4H5a1 1 0 0 0-1 1z"/><path d="M17.2 9.3a4.2 4.2 0 0 1 0 5.4"/></svg></span></span><div class="mtx"><b>广告承接</b><span>朋友圈投放落地页，转化可算</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#F4C64D,#E0A72E)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2.6"/><path d="M10.4 9.3l4.6 2.7-4.6 2.7z"/></svg></span></span><div class="mtx"><b>内容种草页</b><span>商品详情、测评、短视频挂链</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#EF7F70,#D9564A)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="8.8" r="2.9"/><path d="M4.8 18.7c.7-3 2.7-4.7 5.2-4.7s4.5 1.7 5.2 4.7"/><path d="M18.3 7.5v5M15.8 10h5"/></svg></span></span><div class="mtx"><b>老客邀新</b><span>专属邀请码，双向有奖</span></div></div>
+        </div>
+      </div>
+      <div class="matrix-group" data-reveal>
+        <div class="mg-head">
+          <span class="eyebrow">成交</span>
+          <h3>让付款顺到底</h3>
+          <p>从选规格到付款到开票，每一步都少一次跳转、少一次犹豫。</p>
+        </div>
+        <div class="mg-list">
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#3FBF8A,#1E8F63)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l8 4.4v8.8l-8 4.4-8-4.4V7.6z"/><path d="M4.3 7.8L12 12.2l7.7-4.4M12 12.2v8.4"/></svg></span></span><div class="mtx"><b>商品与规格</b><span>多规格、加料、套餐自由组合</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#5FA8F2,#3B7BD9)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9.5" cy="19" r="1.5"/><circle cx="17.5" cy="19" r="1.5"/><path d="M3 4h2.1l2.5 11h10.1L20 8H6"/></svg></span></span><div class="mtx"><b>购物车下单</b><span>堂食 / 自提 / 外送分流</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#9C8DF2,#7763DF)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12.5" rx="2.6"/><path d="M3.5 9.8h17"/><path d="M15.3 14.3h2.4"/></svg></span></span><div class="mtx"><b>微信支付</b><span>下单即付，退款原路返回</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#F5A94E,#E8862F)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.2a2.2 2.2 0 0 1 2.2-2.2h11.6A2.2 2.2 0 0 1 20 8.2v1.6a2.2 2.2 0 0 0 0 4.4v1.6a2.2 2.2 0 0 1-2.2 2.2H6.2A2.2 2.2 0 0 1 4 15.8v-1.6a2.2 2.2 0 0 0 0-4.4z"/><path d="M13.2 6.5v2M13.2 11v2M13.2 15.5v2"/></svg></span></span><div class="mtx"><b>优惠券满减</b><span>满减、折扣、新人券可叠加</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#F2849E,#DD5E80)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 3L5.4 13.4h4.9L9.8 21l7.8-10.4h-4.9z"/></svg></span></span><div class="mtx"><b>拼团秒杀</b><span>成团自动退差，库存防超卖</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#45C8C1,#289E98)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 9L5.4 5h13.2L19.8 9"/><path d="M4.2 9a2.4 2.4 0 0 0 4.9 0 2.4 2.4 0 0 0 4.9 0 2.4 2.4 0 0 0 4.9 0"/><path d="M5.6 11.8V20h12.8v-8.2"/><path d="M9.6 20v-5.2h4.8V20"/></svg></span></span><div class="mtx"><b>到店自提</b><span>取货码、备货提醒、核销</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#F4C64D,#E0A72E)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10.2h3.8l3.2 3v2.8h-7"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></span></span><div class="mtx"><b>配送运费</b><span>按距离/时段算，起送价可配</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#EF7F70,#D9564A)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12V20l-2-1.4-2 1.4-2-1.4L10 20l-2-1.4L6 20z"/><path d="M9 8h6M9 11.5h6"/></svg></span></span><div class="mtx"><b>对账开票</b><span>日结报表、订单流水可导出</span></div></div>
+        </div>
+      </div>
+      <div class="matrix-group" data-reveal>
+        <div class="mg-head">
+          <span class="eyebrow">留存</span>
+          <h3>让客人再来</h3>
+          <p>一次成交不算生意。会员、次卡、提醒、复购券，把这单变成长客。</p>
+        </div>
+        <div class="mg-list">
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#3FBF8A,#1E8F63)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.2l4 3 4-5.7 4 5.7 4-3-1.5 9.8h-13z"/><path d="M9 14.5h6"/></svg></span></span><div class="mtx"><b>会员等级</b><span>成长值、折扣、专属价</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#5FA8F2,#3B7BD9)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.2l2.3 4.7 5.2.8-3.8 3.6.9 5.2-4.6-2.4-4.6 2.4.9-5.2-3.8-3.6 5.2-.8z"/></svg></span></span><div class="mtx"><b>积分体系</b><span>消费得积分，积分抵现</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#9C8DF2,#7763DF)"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6.4" rx="6.2" ry="2.6"/><path d="M5.8 6.4v5.4c0 1.4 2.8 2.6 6.2 2.6s6.2-1.2 6.2-2.6V6.4"/><path d="M5.8 11.8v5.4c0 1.4 2.8 2.6 6.2 2.6s6.2-1.2 6.2-2.6v-5.4"/></svg></span></span><div class="mtx"><b>储值余额</b><span>充多少送多少，锁定消费</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#F5A94E,#E8862F)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 4.4-8 4.4-8-4.4z"/><path d="M4.4 12.8l7.6 4.2 7.6-4.2"/><path d="M4.4 16.6L12 20.8l7.6-4.2"/></svg></span></span><div class="mtx"><b>次卡月卡</b><span>十次卡、月卡、套餐卡</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#F2849E,#DD5E80)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16v-5.2a6 6 0 0 1 12 0V16l1.5 2.4h-15z"/><path d="M10.4 21a1.9 1.9 0 0 0 3.2 0"/></svg></span></span><div class="mtx"><b>预约提醒</b><span>到店前自动推一条</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#45C8C1,#289E98)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 0 1 12.9-5.2l2.6 2.4"/><path d="M20 4.2v5h-5"/><path d="M19.5 12a7.5 7.5 0 0 1-12.9 5.2L4 14.8"/><path d="M4 19.8v-5h5"/></svg></span></span><div class="mtx"><b>复购券</b><span>按消费周期自动发</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#F4C64D,#E0A72E)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.2a2.2 2.2 0 0 1 2.2-2.2h11.6A2.2 2.2 0 0 1 20 6.2v7.6a2.2 2.2 0 0 1-2.2 2.2H9.4L4.6 19.6z"/><path d="M8.6 9.7l2 2 4.2-4.2"/></svg></span></span><div class="mtx"><b>评价口碑</b><span>晒单、评分、案例墙</span></div></div>
+          <div class="mg-item"><span class="ichi"><span class="ic" style="background:linear-gradient(135deg,#EF7F70,#D9564A)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><rect x="6.2" y="11" width="3.2" height="6.6" rx=".9"/><rect x="10.8" y="7.2" width="3.2" height="10.4" rx=".9"/><rect x="15.4" y="4.2" width="3.2" height="13.4" rx=".9"/></svg></span></span><div class="mtx"><b>经营看板</b><span>营业额、客单价、复购率</span></div></div>
+        </div>
+      </div>
+</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">交付成效</span>
+          <h2>上线之后，生意上能看到的变化</h2>
+        </div>
+        <p class="sec-sub">下面三个是我经手项目里最常被问到的结果，数字都来自客户后台截图，可以对着核对。</p>
+      </div>
+
+      <div class="proofs">
+        <div class="proof" data-reveal>
+          <span class="eyebrow">餐饮 · 茶饮</span>
+          <h3>扫码点单上线</h3>
+          <p>原来高峰期四个人挤在收银台，现在两张桌就能撑住，排队的顾客也少了。</p>
+          <div class="metrics">
+            <div><b>68%</b><span>自助下单占比</span></div>
+            <div><b>-2 人</b><span>前台人力</span></div>
+            <div><b>4 天</b><span>上线用时</span></div>
+          </div>
+        </div>
+        <div class="proof" data-reveal>
+          <span class="eyebrow">生鲜 · 团购</span>
+          <h3>团长分佣体系</h3>
+          <p>分佣自动结算，不用再拿表格对账，团长从十几个人扩到六十个。</p>
+          <div class="metrics">
+            <div><b>2.3×</b><span>复购率</span></div>
+            <div><b>60 个</b><span>团长数量</span></div>
+            <div><b>0</b><span>人工对账</span></div>
+          </div>
+        </div>
+        <div class="proof" data-reveal>
+          <span class="eyebrow">美业 · 预约</span>
+          <h3>次卡与排班</h3>
+          <p>纸质次卡换成电子卡，核销记录可查，技师排班每天省下一小时。</p>
+          <div class="metrics">
+            <div><b>0</b><span>漏单</span></div>
+            <div><b>1 小时</b><span>每天省下</span></div>
+            <div><b>4.9</b><span>客户评分</span></div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">精选案例</span>
+          <h2>六套小程序，各自的完整方案</h2>
+        </div>
+        <p class="sec-sub">餐饮、烘焙、咖啡、商城都有完整落地案例：点单、预订、会员、储值一条龙，图片即真实界面。</p>
+      </div>
+
+<div class="showcase">
+      <div class="show-row" data-reveal>
+        <div class="show-no">01</div>
+        <img class="show-thumb" src="img/shot-hotpot-home.jpg" alt="山野菌菇火锅小程序">
+        <div class="show-main"><b>山野菌菇火锅 · 餐饮点单</b><span>山野主题火锅店，堂食、自取、外卖三种模式分流，会员储值六档赠送。</span></div>
+        <div class="show-tags"><i>扫码点单</i><i>储值</i><i>会员</i></div>
+        <div class="show-metrics"><div><b>3 种</b><span>点单方式</span></div><div><b>6 档</b><span>储值赠送</span></div></div>
+      </div>
+      <div class="show-row" data-reveal>
+        <div class="show-no">02</div>
+        <img class="show-thumb" src="img/shot-noodle-home.jpg" alt="李沐禾手擀面小程序">
+        <div class="show-main"><b>李沐禾手擀面 · 面馆点单</b><span>点单与链接 WiFi 二合一，顾客坐下扫码就能下单连网，不用问密码。</span></div>
+        <div class="show-tags"><i>扫码点单</i><i>链接WiFi</i><i>会员</i></div>
+        <div class="show-metrics"><div><b>2 合 1</b><span>点单+连网</span></div><div><b>0 次</b><span>问密码</span></div></div>
+      </div>
+      <div class="show-row" data-reveal>
+        <div class="show-no">03</div>
+        <img class="show-thumb" src="img/shot-bakery-home.jpg" alt="今日甜烘焙小程序">
+        <div class="show-main"><b>今日甜烘焙 · 蛋糕预订</b><span>预订通道独立开启，款式口味个性化定制，充值赠送档位灵活可配。</span></div>
+        <div class="show-tags"><i>预订</i><i>定制</i><i>储值</i></div>
+        <div class="show-metrics"><div><b>独立</b><span>预订通道</span></div><div><b>4 档</b><span>充值方案</span></div></div>
+      </div>
+      <div class="show-row" data-reveal>
+        <div class="show-no">04</div>
+        <img class="show-thumb" src="img/shot-burger-home.jpg" alt="Co's Burger 小程序">
+        <div class="show-main"><b>Co's Burger · 快餐汉堡</b><span>卡通 IP 主题首页，点单、自提、外送三入口分流，券中心常驻引流。</span></div>
+        <div class="show-tags"><i>IP 主题</i><i>点单</i><i>券中心</i></div>
+        <div class="show-metrics"><div><b>3 个</b><span>点单入口</span></div><div><b>IP 化</b><span>视觉主题</span></div></div>
+      </div>
+      <div class="show-row" data-reveal>
+        <div class="show-no">05</div>
+        <img class="show-thumb" src="img/shot-coffee-home.jpg" alt="醒醒咖啡小程序">
+        <div class="show-main"><b>醒醒咖啡 · 咖啡轻食</b><span>果咖系列分类清晰，WiFi 密码直达，会员积分权益一站搞定。</span></div>
+        <div class="show-tags"><i>点单</i><i>WiFi直达</i><i>会员</i></div>
+        <div class="show-metrics"><div><b>直达</b><span>WiFi 密码</span></div><div><b>3 种</b><span>取餐方式</span></div></div>
+      </div>
+      <div class="show-row" data-reveal>
+        <div class="show-no">06</div>
+        <img class="show-thumb" src="img/shot-mall-home.jpg" alt="百变潮鞋小程序">
+        <div class="show-main"><b>百变潮鞋 · 潮流商城</b><span>首页整合分类、营销活动、热类推荐，VIP 至尊会员三档开通。</span></div>
+        <div class="show-tags"><i>商城</i><i>VIP</i><i>分类</i></div>
+        <div class="show-metrics"><div><b>3 档</b><span>VIP 会员</span></div><div><b>8 类</b><span>商品分类</span></div></div>
+      </div>
+</div>
+
+      <p class="sec-sub" style="margin-top:26px;max-width:none">全部源码与后台都已交付。<a href="cases.html" style="color:var(--forest);text-decoration:underline;text-underline-offset:3px">看完整案例 →</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">客户说</span>
+          <h2>他们为什么愿意转介绍</h2>
+        </div>
+        <p class="sec-sub">不写空洞的「服务很好」，只放客户自己说过的话。老客户转介绍占我接单量的九成，这是最实在的评价。</p>
+      </div>
+
+      <div class="quotes">
+        <blockquote class="quote" data-reveal><p>之前找过两家外包，需求传三遍还是做错。这次从原型到上线就一个人对接，改起来特别快，微信上说完第二天就能看到。</p><footer><b>陈先生</b>连锁茶饮 · 12 家门店</footer></blockquote>
+        <blockquote class="quote" data-reveal><p>上线第一个月他发现两个我们自己都没想到的问题，改完才告诉我。这种不用催的感觉挺难得的。</p><footer><b>李女士</b>生鲜团购 · 团长制</footer></blockquote>
+        <blockquote class="quote" data-reveal><p>报价单列得很细，哪个功能多少钱一目了然。后面加需求也没乱加价，按清单算。</p><footer><b>王先生</b>美业连锁 · 6 家门店</footer></blockquote>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">服务保障</span>
+          <h2>交付之后，还有人在</h2>
+        </div>
+        <p class="sec-sub">小程序上线只是开始，改文案、加功能、微信改规则，这些事总得有人接。</p>
+      </div>
+
+      <div class="guards">
+        <div class="guard" data-reveal><b>源码全交付</b><span>小程序前端、后端接口、数据库结构、部署文档，打包一起给你，不锁平台。</span></div>
+        <div class="guard" data-reveal><b>账号在你名下</b><span>服务器、域名、小程序主体都用你的账号，随时能换人接手，不会被卡住。</span></div>
+        <div class="guard" data-reveal><b>上线我代办</b><span>主体认证、类目审核、代码提审、支付开通，流程我跑完，你只管扫脸确认。</span></div>
+        <div class="guard" data-reveal><b>响应有时效</b><span>工作时段 2 小时内回消息，线上故障当天处理，微信直接找我，不用走工单。</span></div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">资源与支持</span>
+          <h2>没开始之前，先拿走这些</h2>
+        </div>
+        <p class="sec-sub">不用先付费才能了解。这些资料、清单和判断标准，你拿去自己评估也够用。</p>
+      </div>
+
+<div class="res">
+      <div class="res-card" data-reveal>
+        <h3>方案与报价模板</h3>
+        <p>你还没想清楚要做什么的时候，先看这几份东西，比聊三小时管用。</p>
+        <ul><li>六类行业常见功能清单</li><li>报价构成拆解表</li><li>需求一句话写法示例</li><li>工期是怎么算出来的</li></ul>
+      </div>
+      <div class="res-card" data-reveal>
+        <h3>上线避坑手册</h3>
+        <p>小程序不是写完代码就完了，卡人的往往是资质和审核。</p>
+        <ul><li>类目选错被打回的三种情况</li><li>支付开通要准备的材料</li><li>审核常见拒绝原因</li><li>主体与账号归属怎么弄</li></ul>
+      </div>
+      <div class="res-card" data-reveal>
+        <h3>源码与文档</h3>
+        <p>交付不是扔个压缩包，是让你以后能自己接手。</p>
+        <ul><li>前端 + 后端 + 数据库结构</li><li>部署与备份说明</li><li>后台操作手册</li><li>接口文档与注释规范</li></ul>
+      </div>
+      <div class="res-card" data-reveal>
+        <h3>对接与咨询</h3>
+        <p>不接的活我会直说，能接的先给方案再谈钱。</p>
+        <ul><li>微信 DYBSSG666</li><li>24 小时内回方案</li><li>不合适可以直说不建议做</li><li>方案可以带走问别家</li></ul>
+      </div>
+</div>
+
+      <p class="sec-sub" style="margin-top:26px;max-width:none">需要哪份直接微信找我要，不用注册、不用留电话。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">常见问题</span>
+          <h2>先回答几个最常被问的</h2>
+        </div>
+        <p class="sec-sub">这些问题每次沟通都会遇到，写在这儿省一轮来回。</p>
+      </div>
+      <div class="faq">
+        <details data-reveal open>
+          <summary>做一个自己的小程序要多少钱？</summary>
+          <p>基础版 680 起（8 个页面以内，模板改版），标准定制 1,580 起，带多门店或要对接 ERP/POS 的 3,800 起。价格差别主要在页面数量、要不要会员体系和后台。可以先免费评估，我会给一个固定报价，不会边做边加。</p>
+        </details>
+        <details data-reveal>
+          <summary>没有营业执照、没有小程序账号能做吗？</summary>
+          <p>展示类、工具类可以先用个人主体注册，能上线但不能开微信支付。要卖东西、要收款就必须企业或个体户主体——注册个体户比你想的简单，我可以把流程列给你。账号用你自己的，我不代持。</p>
+        </details>
+        <details data-reveal>
+          <summary>你自己做，还是接单转给别人？</summary>
+          <p>从原型、设计到开发上线都是我一个人跟，所以你不用把需求讲三遍。遇到特别偏的模块（比如复杂的硬件对接）我会提前说，并且只在我能把控的前提下才接。</p>
+        </details>
+        <details data-reveal>
+          <summary>上线之后出问题找谁？</summary>
+          <p>找我。保修期内 Bug 免费修，微信规则变了跟着改。工作时段 2 小时内回消息，微信直接说，不用走工单系统。</p>
+        </details>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">快速了解</span>
+          <h2>四条路，看你想先看哪</h2>
+        </div>
+        <p class="sec-sub">从做过的项目、能给的能力、交付节奏到报价，都摊开写清楚，不用先聊再看。</p>
+      </div>
+
+      <div class="routes">
+        <a class="route" href="cases.html" data-reveal><b>案例</b><span>点单、预约、商城、会员，六类线下生意做过的样子。</span><i>看看做过什么 →</i></a>
+        <a class="route" href="services.html" data-reveal style="--d:.06s"><b>服务</b><span>定制开发、模板上线、后台系统、上线维护，四项能单点。</span><i>能帮我做什么 →</i></a>
+        <a class="route" href="process.html" data-reveal style="--d:.12s"><b>流程</b><span>五步交付，每步有产出物，确认了再往下走。</span><i>怎么合作 →</i></a>
+        <a class="route" href="pricing.html" data-reveal style="--d:.18s"><b>价格</b><span>三档报价写明白，范围定了价格就定了。</span><i>大概多少钱 →</i></a>
+      </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>聊聊你的想法</h2>
+      <p>把场景和预算说清楚，24 小时内给你一份可行的做法、工期和报价。不合适也没关系，方案可以带走。</p>
+    </div>
+    <a class="btn" href="contact.html">免费评估</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="logo" href="index.html"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="7" fill="#08482D"/><path d="M8.6 9.4 5.2 13l3.4 3.6M17.4 9.4l3.4 3.6-3.4 3.6M14.8 7.8 11.2 18.2" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>码创工坊</span></a>
+      <div class="footer-links">
+        <a href="cases.html">案例</a>
+        <a href="services.html">服务</a>
+        <a href="process.html">流程</a>
+        <a href="pricing.html">价格</a>
+        <a href="contact.html">联系</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© <span id="year">2026</span> 码创工坊 · 微信小程序定制开发</span>
+      <span>微信联系 · DYBSSG666</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script src="assets/hero.js"></script>
+</body>
+</html>

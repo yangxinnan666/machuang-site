@@ -37,6 +37,20 @@ npx serve .
 
 已适配 Vercel，导入本仓库即可，构建配置全部留空（Framework Preset 选 Other）。
 
+### 表单发信配置（必须）
+
+表单通过 `api/send.js`（Vercel Serverless Function）用 QQ 邮箱 SMTP 直发，需要配置两个环境变量：
+
+1. QQ 邮箱网页版 → 设置 → 账号 → 开启「IMAP/SMTP 服务」→ 生成**授权码**（16 位字母，不是 QQ 密码）
+2. Vercel 项目 → Settings → Environment Variables 添加：
+
+   | 名称 | 值 |
+   | --- | --- |
+   | `QQ_SMTP_USER` | `2597252592@qq.com` |
+   | `QQ_SMTP_PASS` | 上一步生成的授权码 |
+
+3. Deployments → Redeploy 使变量生效
+
 ## 需要修改的地方
 
 站点内容集中在 `assets/site.js` 顶部的 `SITE` 对象：
@@ -45,12 +59,12 @@ npx serve .
 const SITE = {
   email: '2597252592@qq.com',
   wechat: 'DYBSSG666',
-  formEndpoint: 'https://formsubmit.co/2597252592@qq.com',
+  formEndpoint: '/api/send',
   heroMode: 'images',
   heroImages: [ ... ],
   cases: [ ... ]
 };
 ```
 
-- 表单使用 FormSubmit 转发到邮箱，首次提交后需在邮箱点击激活链接
+- 表单走自建 Vercel 接口直发邮箱（见上方「表单发信配置」），无第三方依赖
 - 微信二维码图片位于 `img/wechat-qr.png`

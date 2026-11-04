@@ -2,7 +2,7 @@
 var SITE = {
   email: '2597252592@qq.com',                                    // 收件邮箱（改了这里两端都变）
   wechat: 'DYBSSG666',                                            // ← 你的微信号
-  formEndpoint: 'https://formsubmit.co/ajax/2597252592@qq.com',  // formsubmit.co/ajax/ + 同一个邮箱
+  formEndpoint: '/api/send',  // Vercel 自建发信接口（QQ 邮箱 SMTP），配置见 README
   heroMode: 'images',                                             // 'video' 用示例视频；'images' 用你的截图
 
   // 换成自己的小程序截图：heroMode 改 'images'，把 10 张竖图地址填进来
@@ -159,16 +159,14 @@ window.SITE = SITE;
 
       fetch(SITE.formEndpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          '称呼': data.name,
-          '微信 / 手机': data.contact,
-          '项目类型': data.type,
-          '预算范围': data.budget,
-          '需求描述': data.message,
-          _subject: '【小程序咨询】' + (data.type || '') + ' - ' + data.name,
-          _template: 'table',
-          _captcha: 'false'
+          name: data.name,
+          contact: data.contact,
+          type: data.type,
+          budget: data.budget,
+          message: data.message,
+          _honey: data._honey || ''
         })
       })
       .then(function (r) {
@@ -177,25 +175,28 @@ window.SITE = SITE;
         });
       })
       .then(function (res) {
-        var b = res.body || {};
-        if (String(b.success) === 'true') {
+        if (res.ok && res.body.ok) {
           card.classList.add('is-sent');
           setBusy(false);
           return;
         }
         setBusy(false);
-        var m = String(b.message || '');
-        if (/activation|activate/i.test(m)) {
-          fail('邮箱还没完成激活：请到 ' + SITE.email + ' 收件箱点一下 FormSubmit 的激活链接，之后表单就能正常收信了。（也可以先直接邮件联系我）');
-        } else if (/web server|HTML files/i.test(m)) {
-          fail('本地直接双击打开 HTML 时表单发不出去，部署到线上（或本地起服务）后正常。也可以先直接邮件联系我。');
+        var e = String(res.body.error || '');
+        if (e === 'not-configured') {
+          fail('表单服务还没配置好，暂时发不出去。可以直接邮件联系我：' + SITE.email);
+        } else if (e === 'missing-fields') {
+          fail('有几项没填全，检查一下再发一次。');
         } else {
-          fail('邮件服务暂时没响应，已保留你填的内容，可以直接发邮件给我：' + SITE.email);
+          fail('发送失败，内容已保留。可以直接邮件给我：' + SITE.email);
         }
       })
       .catch(function () {
         setBusy(false);
-        fail('网络异常，没发出去。内容还在，重试一次或直接邮件给我：' + SITE.email);
+        if (window.location.protocol === 'file:') {
+          fail('本地双击打开时表单发不出去，线上网站正常。也可以直接邮件给我：' + SITE.email);
+        } else {
+          fail('网络异常，没发出去。内容还在，重试一次或直接邮件给我：' + SITE.email);
+        }
       });
     });
   })();
